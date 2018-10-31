@@ -21,11 +21,6 @@ let kStatusBarHeight: CGFloat = isIPhoneX ? 44.0 : 20.0
 let iPhoneXBottomHeight: CGFloat = 34.0
 let iPhoneXTopHeight: CGFloat = 24.0
 
-/// MARK: - 颜色方法
-func kRGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
-    return UIColor(red: r/255.0, green: g/255.0, blue: b/255.9, alpha: a)
-}
-
 let kThemeWhiteColor = UIColor(hex: 0xFFFFFF)
 let kThemeWhiteSmokeColor = UIColor(hex: 0xF5F5F5)
 let kThemeMistyRoseColor = UIColor(hex: 0xFFE4E1)  // 薄雾玫瑰
@@ -40,16 +35,25 @@ let kThemeDimGrayColor = UIColor(hex: 0x696969)
 let kThemeBlackColor = UIColor(hex: 0x000000)
 let kThemeBackgroundColor = UIColor(hex: 0xF4F4F4)
 
-let kHabitIconPeonyPinkColor = UIColor(hex: 0xeea2a4) // 牡丹粉红
-let kHabitIconRosePurpleColor = UIColor(hex: 0xba2f7b) // 玫瑰紫
-let kHabitIconLightBluePurpleColor = UIColor(hex: 0xa7a8bd) // 淡蓝紫
-let kHabitIconCloudWaterBlueColor = UIColor(hex: 0xbaccd9) // 云水蓝
-let kHabitIconLightBlueGrayColor = UIColor(hex: 0x5e7987) // 淡蓝灰
-let kHabitIconMoonShadowWhiteColor = UIColor(hex: 0xc0c4c3) // 月影白
-let kHabitIconCuprumGreenColor = UIColor(hex: 0x2bae85) // 铜绿
-let kHabitIconRapeFlowerYellowColor = UIColor(hex: 0xfbda41) // 油菜花黄
-let kHabitIconPheasantBrownColor = UIColor(hex: 0x986524) // 山鸡褐
+let kHabitIconBisqueColor = UIColor(hex: 0xFFE4C4)
+let kHabitIconBurlyWoodColor = UIColor(hex: 0xDEB887)
+let kHabitIconCornflowerBlueColor = UIColor(hex: 0x6495ED)
+let kHabitIconCyanColor = UIColor(hex: 0x00FFFF)
+let kHabitIconDarkCyanColor = UIColor(hex: 0x008B8B)
+let kHabitIconDarkSalmonColor = UIColor(hex: 0xE9967A)
+let kHabitIconDeepSkyBlueColor = UIColor(hex: 0x00BFFF)
+let kHabitIconGreenYellowColor = UIColor(hex: 0xADFF2F)
+let kHabitIconLavenderColor = UIColor(hex: 0xE6E6FA)
+let kHabitIconLightPinkColor = UIColor(hex: 0xFFB6C1)
+let kHabitIconPlumColor = UIColor(hex: 0xDDA0DD)
+let kHabitIconThistleColor = UIColor(hex: 0xD8BFD8)
+let kHabitIconTomatoColor = UIColor(hex: 0xFF6347)
 
+
+/// MARK: - 颜色方法
+func ompRGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
+    return UIColor(red: r/255.0, green: g/255.0, blue: b/255.9, alpha: a)
+}
 
 /// MARK: - 自定义打印方法
 func ompLog<T>(_ message: T,
