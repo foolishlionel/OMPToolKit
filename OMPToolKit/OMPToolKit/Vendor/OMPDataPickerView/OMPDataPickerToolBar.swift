@@ -12,17 +12,20 @@ class OMPDataPickerToolBar: UIToolbar {
     let cancelButton = UIBarButtonItem(
         barButtonSystemItem: .cancel,
         target: nil,
-        action: nil)
+        action: nil
+    )
     
     let confirmButton = UIBarButtonItem(
         barButtonSystemItem: .done,
         target: nil,
-        action: nil)
+        action: nil
+    )
     
     let flexibleSpace = UIBarButtonItem(
         barButtonSystemItem: .flexibleSpace,
         target: nil,
-        action: nil)
+        action: nil
+    )
     
     let titleButton = OMPDataPickerTitleBarButtonItem(title: nil)
 
@@ -90,6 +93,10 @@ fileprivate extension OMPDataPickerToolBar {
         autoresizingMask = [.flexibleWidth, .flexibleHeight]
         isTranslucent = true
         tintColor = UIColor.black // default tint color is black
-        items = [cancelButton, flexibleSpace, titleButton, flexibleSpace, confirmButton];
+        items = [cancelButton,
+                 flexibleSpace,
+                 titleButton,
+                 flexibleSpace,
+                 confirmButton]
     }
 }

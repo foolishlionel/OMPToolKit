@@ -119,7 +119,7 @@ open class OMPDataPickerView: UIView {
     }()
     
     fileprivate let toolBar: OMPDataPickerToolBar = {
-        let bar = OMPDataPickerToolBar()
+        let bar = OMPDataPickerToolBar(frame: .zero)
         return bar
     }()
     
@@ -162,6 +162,7 @@ open class OMPDataPickerView: UIView {
         
         toolBar.confirmButton.target = self
         toolBar.confirmButton.action = #selector(didClickConfirmButton(button:))
+        addSubview(toolBar)
         
         guard let picker = pickerView else { return }
         addSubview(picker)
@@ -204,7 +205,7 @@ extension OMPDataPickerView {
         toolBar.barTintColor = color
     }
     
-    public func setTooBarTintColor(color: UIColor?) {
+    public func setToolBarTintColor(color: UIColor?) {
         toolBar.tintColor = color
     }
     
@@ -242,11 +243,11 @@ extension OMPDataPickerView {
     }
     
     public func show(with completion: (() -> Void)? = nil) {
-        
+        dataPickerController.showPickerView(pickerView: self, completion: completion)
     }
     
     public func dismis(with completion: (() -> Void)? = nil) {
-        
+        dataPickerController.dismissWithCompletion(completion: completion)
     }
 }
 

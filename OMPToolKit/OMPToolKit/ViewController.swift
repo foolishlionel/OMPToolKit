@@ -14,28 +14,41 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        let apperance = OMPDataPickerView.appearance()
-//        apperance.setConfirmButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.darkGray])
-//        apperance.setCancelButtonAttributes(att: [NSForegroundColorAttributeName: UIColor.darkGray])
-//        apperance.setToolBarTintColor(color: .lightGray)
-//        apperance.setToolBarBarTintColor(color: UIColor(white: 0.9, alpha: 0.5))
-//        apperance.setTitleFont(font: UIFont.systemFont(ofSize: 14))
-//        apperance.setTitleColor(color: UIColor(colorLiteralRed: 0.0, green: 0.5, blue: 1.0, alpha: 1.0))
+        
+        
+    }
+    @IBOutlet weak var pushViewController: UIButton!
+    @IBAction func buttonClicked(_ sender: Any) {
         
         let pickerView = OMPDataPickerView(title: "TTADataPickerView", type: .text, delegate: nil)
         // configure pickerView type with this property
         pickerView.type = .text
+        pickerView.setConfirmButtonAttributes(att: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+        pickerView.setCancelButtonAttributes(att: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+        pickerView.setToolBarTintColor(color: UIColor.lightGray)
+        pickerView.setToolBarBarTintColor(color: UIColor(white: 0.9, alpha: 0.5))
+        pickerView.setTitleFont(font: UIFont.systemFont(ofSize: 14))
+        pickerView.setTitleColor(color: UIColor.red)
         // configure the delegate
         pickerView.delegate = self
         // when the pickerView type is .text, configure this property to tell the pickerView what you want to select
         pickerView.textItemsForComponent = [["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"], ["First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth"]]
-        let titles = ["111", "222", "444"]
+        let titles = ["First", "Second", "Third"]
         // set the selectedTitles when the pickerView appers
         pickerView.selectedTitles(titles)
         // call show() or show(with completion: (() -> Void)? = nil) to show the pickerView from the bottom of the screen
         pickerView.show()
+        
+//        let apperance = OMPDataPickerView.appearance()
+//        apperance.setConfirmButtonAttributes(att: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+//        apperance.setCancelButtonAttributes(att: [NSAttributedStringKey.foregroundColor: UIColor.darkGray])
+//        apperance.setToolBarTintColor(color: UIColor.lightGray)
+//        apperance.setToolBarBarTintColor(color: UIColor(white: 0.9, alpha: 0.5))
+//        apperance.setTitleFont(font: UIFont.systemFont(ofSize: 14))
+//        apperance.setTitleColor(color: UIColor.red)
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

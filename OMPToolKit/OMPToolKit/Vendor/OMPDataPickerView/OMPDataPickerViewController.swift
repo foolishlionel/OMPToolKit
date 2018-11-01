@@ -31,7 +31,7 @@ extension OMPDataPickerViewController {
         self.pickerView = pickerView
         
         var topController = UIApplication.shared.keyWindow?.rootViewController
-        while (topController?.presentationController != nil) {
+        while (topController?.presentedViewController != nil) {
             topController = topController?.presentedViewController
         }
         topController?.resignFirstResponder()
@@ -39,11 +39,11 @@ extension OMPDataPickerViewController {
         pickerView.frame.origin.y = view.bounds.size.height
         view.addSubview(pickerView)
         
-        view.frame = CGRect.init(
+        view.frame = CGRect(
             x: 0,
             y: 0,
-            width: topController?.view.bounds.width ?? 0,
-            height: topController?.view.bounds.height ?? 0
+            width: topController?.view.bounds.size.width ?? 0,
+            height: topController?.view.bounds.size.height ?? 0
         )
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         topController?.addChildViewController(self)
